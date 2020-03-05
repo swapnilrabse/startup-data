@@ -1,0 +1,20 @@
+<div class='cmsheader'>
+<ul>
+
+  <li class="{{activeTab =='players'?'active':''}}">
+      <a routerLink="players"  href="javascript:void(0);" (click)="activeTab='players'">players</a>
+  </li>
+  <li class="{{activeTab =='coaches'?'active':''}}">
+    <a routerLink="coaches" href="javascript:void(0);" (click)="activeTab='coaches'">Coaches</a>
+</li>
+<li class="{{activeTab =='teams'?'active':''}}">
+ <a  routerLink="teams" href="javascript:void(0);" (click)="activeTab='teams'">Teams</a>
+</li>
+<li class="{{activeTab =='clubs'?'active':''}}">
+  <a routerLink="clubs" href="javascript:void(0);" (click)="activeTab='clubs'">Clubs</a>
+</li>
+<li class="{{activeTab =='activities'?'active':''}}">
+  <a routerLink="activities" href="javascript:void(0);" (click)="activeTab='activities'">Activities</a>
+</li>
+</ul>
+</div>
