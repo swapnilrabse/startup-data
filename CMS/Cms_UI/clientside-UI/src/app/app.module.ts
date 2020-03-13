@@ -19,6 +19,9 @@ import { MustMatchDirective } from './helpers/mustmatchvalidator';
 import { UpdateCoachComponent } from './cms-dashboard/coaches/update-coach/update-coach.component';
 import { UpdateTeamsComponent } from './cms-dashboard/teams/update-teams/update-teams.component';
 import { ActivitiesComponent } from './cms-dashboard/activities/activities.component';
+import { PortfolioDashboardComponent } from './portfolio-dashboard/portfolio-dashboard.component';
+import { UserprofilesComponent } from './portfolio-dashboard/userprofiles/userprofiles.component';
+import { ScoutsComponent } from './portfolio-dashboard/scouts/scouts.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { ActivitiesComponent } from './cms-dashboard/activities/activities.compo
     MustMatchDirective,
     UpdateCoachComponent,
     UpdateTeamsComponent,
-    ActivitiesComponent
+    ActivitiesComponent,
+    PortfolioDashboardComponent,
+    UserprofilesComponent,
+    ScoutsComponent
   ],
   imports: [
     BrowserModule,

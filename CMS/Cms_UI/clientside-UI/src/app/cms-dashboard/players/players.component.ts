@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {CsmUserdataService} from '../../csm-userdata.service';
 import * as UsersEnums from '../../cms-login/cms-login-enum';
 
@@ -12,13 +12,23 @@ export class PlayersComponent implements OnInit {
   playerData:any=[];
   usersEnums = UsersEnums;
   updateplayer=false;
+  showCreatePlayer=false;
   createNewPlayer=false;
   editplayer:any;
   teams;
+  title:any;
+  @Input() appName:any;
   constructor(private csmUserdataService: CsmUserdataService) { }
 
 
   ngOnInit() {
+    if(this.appName=='portfolio'){
+      this.title='Portfolio players';
+      this.showCreatePlayer=false;
+    }else{
+      this.title='Players';
+      this.showCreatePlayer=true;
+    }
     this.getAllplayers();
   }
 

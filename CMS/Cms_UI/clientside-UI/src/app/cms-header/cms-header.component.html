@@ -1,20 +1,30 @@
 <div class='cmsheader'>
-<ul>
+  <span class="menuBtn" (click)="openMenu()" >&#9776;</span>
+<ul class='tabs'>
 
-  <li class="{{activeTab =='players'?'active':''}}">
-      <a routerLink="players"  href="javascript:void(0);" (click)="activeTab='players'">players</a>
+  <li *ngIf="isclub"  class="{{activeTab =='players'?'active':''}}">
+      <a  (click)="loadTabs('players')"  href="javascript:void(0);" >players</a>
   </li>
-  <li class="{{activeTab =='coaches'?'active':''}}">
-    <a routerLink="coaches" href="javascript:void(0);" (click)="activeTab='coaches'">Coaches</a>
+  <li *ngIf="isclub" class="{{activeTab =='coaches'?'active':''}}">
+    <a  (click)="loadTabs('coaches')" href="javascript:void(0);" >Coaches</a>
 </li>
-<li class="{{activeTab =='teams'?'active':''}}">
- <a  routerLink="teams" href="javascript:void(0);" (click)="activeTab='teams'">Teams</a>
+<li *ngIf="isclub" class="{{activeTab =='teams'?'active':''}}">
+ <a   (click)="loadTabs('teams')" href="javascript:void(0);" >Teams</a>
 </li>
-<li class="{{activeTab =='clubs'?'active':''}}">
-  <a routerLink="clubs" href="javascript:void(0);" (click)="activeTab='clubs'">Clubs</a>
+<li *ngIf="isclub"  class="{{activeTab =='clubs'?'active':''}}">
+  <a  (click)="loadTabs('clubs')" href="javascript:void(0);">Clubs</a>
 </li>
-<li class="{{activeTab =='activities'?'active':''}}">
-  <a routerLink="activities" href="javascript:void(0);" (click)="activeTab='activities'">Activities</a>
+<li *ngIf="isclub"  class="{{activeTab =='activities'?'active':''}}">
+  <a  (click)="loadTabs('activities')" href="javascript:void(0);" >Activities</a>
+</li>
+<li *ngIf="!isclub"  class="{{activeTab =='users'?'active':''}}">
+  <a   (click)="loadTabs('users')"  href="javascript:void(0);" >players</a>
 </li>
 </ul>
+</div>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" (click)="closeMenu()">&times;</a>
+  <a   (click)="changeCms('club')">Club</a>
+  <a (click)="changeCms('Portfolio')">Portfolio</a>
+  
 </div>
